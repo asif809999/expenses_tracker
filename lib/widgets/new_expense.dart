@@ -63,6 +63,7 @@ class _NewExpenseState extends State<NewExpense> {
         category: _selectedCategory,
       ),
     );
+    Navigator.pop(context); // to make the overlay close automatically
   }
 
   @override
@@ -75,7 +76,8 @@ class _NewExpenseState extends State<NewExpense> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.fromLTRB(
+          16, 48, 16, 16), // not to overlap the camera by inputs
       child: Column(
         children: [
           TextField(

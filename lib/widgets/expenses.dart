@@ -30,6 +30,7 @@ class _ExpensesState extends State<Expenses> {
 
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
+      isScrollControlled: true, // not to make the keyboard overlap inputs
       context: context,
       builder: (ctx) => NewExpense(onAddExpense: _addExpense),
     );
