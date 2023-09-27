@@ -38,6 +38,7 @@ class ExpenseBucket {
     required this.category,
     required this.expenses,
   });
+  ExpenseBucket.forCategory();
   final Category category;
   final List<Expense> expenses;
 
