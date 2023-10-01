@@ -31,6 +31,7 @@ class _ExpensesState extends State<Expenses> {
 
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
+      useSafeArea: true, // not to make input overlap the camera
       isScrollControlled: true, // not to make the keyboard overlap inputs
       context: context,
       builder: (ctx) => NewExpense(onAddExpense: _addExpense),
